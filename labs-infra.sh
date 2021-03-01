@@ -16,4 +16,4 @@ oc login ${MASTER_URL} -u opentlc-mgr -p r3dh4t1! --insecure-skip-tls-verify=tru
 
 oc new-project labs-infra
 
-oc run apb --restart=Never --image="quay.io/kamorisan/rhpam-rhdm-workshop-v1-apb:latest" --image-pull-policy=Always -- provision -vvv -e namespace="labs-infra" -e openshift_token=$(oc whoami -t) -e openshift_master_url=${OPENSHIFT_CONSOLE} -e user_count=${USER_COUNT} -e modules=m1,m2,m3,m4
+oc run apb --restart=Never --image="quay.io/kamori/rhpam-rhdm-workshop-v1-apb:latest" --image-pull-policy=Always -- provision -vvv -e namespace="labs-infra" -e openshift_token=$(oc whoami -t) -e openshift_master_url=${OPENSHIFT_CONSOLE} -e user_count=${USER_COUNT} -e modules=m1,m2,m3,m4
